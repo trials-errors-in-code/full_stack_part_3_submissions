@@ -1,0 +1,30 @@
+.error {
+  border: 1px solid red;
+  border-radius: 2px;
+  background-color: rgb(233, 65, 23);
+  padding: 4px;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+}
+
+.messageDisplay {
+  border: 1px solid red;
+  border-radius: 2px;
+  background-color: rgb(153, 226, 43);
+  padding: 4px;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+}
+
+
+
+.form input {
+  padding: 2px;
+  margin: 5px;
+}

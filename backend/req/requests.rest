@@ -1,0 +1,24 @@
+GET http://localhost:3001/api/notes/5c41c90e84d891c15dfa3431
+
+
+###
+GET http://localhost:3001/api/notes/6a4e089bc8562fbfe81d8860
+
+###
+DELETE http://localhost:3001/api/persons/6a4e07df2c5250c00b260367
+
+###
+GET http://localhost:3001/info
+
+###
+GET http://localhost:3001/api/persons
+
+###
+
+POST http://localhost:3001/api/persons
+content-type:application/json
+
+{
+  "name": "this is a name",
+  "number": "0-1234567"
+}
