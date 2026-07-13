@@ -1,2 +1,4 @@
-# full_stack_part_3_submissions
-Part 3 submissions for the full stack open course evaluation
+### Contains the phonebook exercise and its database
+
+### Link to render deployment
+https://full-stack-part-3-submissions.onrender.com
