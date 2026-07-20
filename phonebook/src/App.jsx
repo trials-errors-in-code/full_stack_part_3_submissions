@@ -108,8 +108,8 @@ const App = () => {
       })
       .catch((error) => {
         console.log(error.response.data.error)
-        if (error.response.data.error === 'ValidationError') {
-          setErrorMessage('Name must be 3 characters long or number is not correct')
+        if (error.response && error.response.data && error.response.data.error) {
+          setErrorMessage(error.response.data.error)
         } else {
           setErrorMessage('something bad happened, try again')
         }

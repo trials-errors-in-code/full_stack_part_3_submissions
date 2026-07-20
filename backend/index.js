@@ -80,11 +80,11 @@ app.put('/api/persons/:id', (req, res, next) => {
       }
       person.name = name
       person.number = number
-      person.save().then((updatedPerson) => {
+      return person.save().then((updatedPerson) => {
         res.json(updatedPerson)
       })
     })
-    .catch(() => next('server error'))
+    .catch((error) => next(error))
 })
 
 const unknownEndpoint = (req, res, next) => {
@@ -94,10 +94,10 @@ const unknownEndpoint = (req, res, next) => {
 
 app.use(unknownEndpoint)
 
-const errorHandler = (error, req, res) => {
+const errorHandler = (error, req, res, next) => {
   console.log('Error:', error.message || error)
   if (error.name === 'ValidationError') {
-    return res.status(400).json({ error: 'ValidationError' })
+    return res.status(400).json({ error: error.message })
   } else if (error === 'endpoint error') {
     return res.status(404).send({ error: 'unknown endpoint' })
   } else if (error === 'post error') {
